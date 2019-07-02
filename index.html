@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="functions.js"></script>
+  </head>
+  <body class="container-fluid">
+    <header class="row headerPart">
+      <div class="col-12 headerContent">
+        <img src="img/logo.png" />
+        <ul class="headerList">
+          <li class="headerItemList"><a href="#">Support</a></li>
+          <li class="headerItemList"><a href="#">Announcement</a></li>
+          <li class="headerItemList">
+            <a href="#" id="register">Register</a>
+          </li>
+          <li class="headerItemList"><a href="#">Log In</a></li>
+        </ul>
+      </div>
+    </header>
+    <section class="row sectionPart">
+      <div class="col-12 textTitle">
+        <h1>The Easiest Way to Buy Cryptocurrency in Uganda</h1>
+        <h3>Industry leading security and full 24-hour support from Binance</h3>
+      </div>
+      <div class="col-12 clockCol">
+        <div class="row clockrow">
+          <div class="col-2 col-md-4"></div>
+          <div class="col-2 col-md-1 dateTime" id="firstTime">
+            <h2 id="clockz">0</h2>
+            <!--To put days to work you change the id for "clock"-->
+            <h3>D</h3>
+          </div>
+          <div class="col-2 col-md-1 dateTime">
+            <h2 id="clockH">0</h2>
+            <h3>H</h3>
+          </div>
+          <div class="col-2 col-md-1  dateTime">
+            <h2 id="clockM">0</h2>
+            <h3>M</h3>
+          </div>
+          <div class="col-2 col-md-1 dateTime" id="lastTime">
+            <h2 id="clockS">0</h2>
+            <h3>S</h3>
+          </div>
+          <div class="col-2 col-md-4"></div>
+        </div>
+      </div>
+      <div class="col-12 barCol">
+        <div class="row rowBarDown">
+          <div class="d-none d-md-block col-md-1"></div>
+          <div class="col-12 col-md-10 d-flex justify-content-center">
+            <div class="allCompact">
+              <span style="display: inline-block">Buy </span>
+              <div class="stuckStuff" style="display: inline-block">
+                <input
+                  placeholder="   Enter Amount"
+                  onkeypress="validate(event)"
+                  id="amountId"
+                />
+                <img src="img/ugx.png" class="ugandaflag" />
+                BNB
+              </div>
+              <span style="display: inline-block">With</span>
+              <div class="stuckStuff2" style="display: inline-block">
+                <input
+                  placeholder="    Enter Amount"
+                  onkeypress="validate(event)"
+                />
+              </div>
+              <div class="dropdown btn-group">
+                <button
+                  class="btn btn-primary dropdown-toggle"
+                  type="button"
+                  data-toggle="dropdown"
+                >
+                  <img
+                    id="my_image"
+                    src="img/btc.png"
+                    class="imz"
+                    style="display: inline-block; height: 25px"
+                  />
+                  <h6 style="display: inline-block">BTC</h6>
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><img src="img/btc.png" style=" height: 19px" />BTC</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><img src="img/eth.png" style=" height: 19px" />ETH</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <button
+                class="willBuy"
+                style="display: inline-block"
+                onclick="buyFunction()"
+              >
+                Buy
+              </button>
+            </div>
+          </div>
+          <div class="d-none d-md-block col-md-1"></div>
+        </div>
+      </div>
+    </section>
+    <popUp class="row">
+      <div class="col-4 offset-4 popupMaterial" id="popUpId" align="center">
+        <div class="form-group">
+          <label for="sel1" class="address">Payment address</label:>
+          <select class="form-control" id="sel1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+        <h4>Payment amount:</h4>
+        <div class="amount" id="amountOneId" style="display: inline-block">
+            <h4 style="display: inline-block" >0</h4>
+            <!--<div style="display: inline-block" class="vl"></div>--> 
+            <img style="display: inline-block" src="img/btc.png" class="popUplogo" />
+            <h5 style="display: inline-block">BTC</h5>
+        </div>
+      <!--  <div class="amount" style="display: inline-block"> 
+            <h4 style="display: inline-block" id="numChangeForUSD">0</h4>
+           <div style="display: inline-block" class="vl"></div>
+            <img style="display: inline-block" src="img/tlogo.png" class="popUplogo" />
+            <h5 style="display: inline-block">USDT</h5>
+        </div>-->
+        <h4>You receive:</h4>
+        <div class="amount" style="display: inline-block">
+          <h4 style="display: inline-block" id="numChange">0 </h4>
+          <img style="display: inline-block" src="img/ugx.png" class="popUplogo" />
+          <h5 style="display: inline-block" class="bnb"> BNB</h5></div>
+          <h4 class="awaiting">Awaiting payment...</h4>
+      <button style="display: block" onclick="callPopUpOff()" class="popUpButton">Ok</button>
+     
+    </div>
+    </popUp>
+    <div class="overLay" id="overLayId"></div>
+  </body>
+</html>
